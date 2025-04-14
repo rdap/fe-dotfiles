@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec rlwrap -H .lisp_history sbcl --noinform

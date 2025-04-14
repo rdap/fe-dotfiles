@@ -1,0 +1,22 @@
+# -*- conf -*-
+# The neuchrome palette.
+
+[colors]
+foreground=dcdcdc
+background=242424
+regular0=3c3c3c # black
+regular1=f64c4c # red
+regular2=2dcc70 # green
+regular3=f0932b # yellow
+regular4=39b0ff # blue
+regular5=9a59b5 # magenta
+regular6=00b093 # cyan
+regular7=dcdcdc # white
+bright0=666666  # bright black
+bright1=ff6262  # bright red
+bright2=38ff8f  # bright green
+bright3=f1c40f  # bright yellow
+bright4=79c7ff  # bright blue
+bright5=d97dff  # bright magenta
+bright6=00ffd5  # bright cyan
+bright7=f0f0f0  # bright white

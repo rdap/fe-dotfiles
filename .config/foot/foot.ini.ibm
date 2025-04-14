@@ -1,0 +1,4 @@
+[main]
+include=~/.local/share/foot/themes/novachrome
+font=NotoSansMono:size=10
+font-bold=NotoSansMono:size=10

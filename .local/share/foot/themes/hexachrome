@@ -1,0 +1,22 @@
+# -*- conf -*-
+# The hexachrome palette.
+
+[colors]
+foreground=b8b8b8
+background=242424
+regular0=242424 # black
+regular1=e15925 # red
+regular2=25bd66 # green
+regular3=d1902d # yellow
+regular4=0f51b4 # blue
+regular5=bc237a # magenta
+regular6=0188bc # cyan
+regular7=b8b8b8 # white
+bright0=666666  # bright black
+bright1=f3652b  # bright red
+bright2=2bd674  # bright green
+bright3=eca334  # bright yellow
+bright4=0f51b4  # bright blue
+bright5=bc237a  # bright magenta
+bright6=0188bc  # bright cyan
+bright7=f7f7f7  # bright white
