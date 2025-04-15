@@ -20,9 +20,9 @@ echo "The default is no. Valid options are: yes, no"
 read -p "screen> " SCRTYPE
 
 echo ""
-echo "Would you like to install a rational emacs?"
+echo "Would you like to install a more advanced editor?"
 echo "The default is yes. Valid options are: yes, no"
-read -p "emacs> " EMACS
+read -p "editor> " ADVEDITOR
 
 echo ""
 echo "Okay, here we go..."
@@ -38,7 +38,7 @@ cp -r .config/* ~/.config/
 if [ "$KBDTYPE" == "mac" ]; then
     cp .config/sway/config.mac ~/.config/sway/config
 else
-    cp .config/sway/config.pc ~/.config/sway/config
+    cp .config/sway/config ~/.config/sway/config
 fi
 
 if [ "$SCRTYPE" == "yes" ]; then
@@ -47,11 +47,12 @@ else
     cp .config/foot/foot.ini ~/.config/foot/foot.ini
 fi
 
-if [ "$EMACS" == "no" ]; then
+if [ "$ADVEDITOR" == "no" ]; then
     echo ""
-    echo "Skipping emacs installation..."
+    echo "Skipping advanced editor installation..."
 else
-    sudo dnf install -y sbcl rlwrap emacs-nw
+    sudo dnf remove -y nano nano-default-editor
+    sudo dnf install -y vim-default-editor emacs-nw sbcl rlwrap
 
     rm -rf ~/.emacs.d
     cp -r .emacs.d ~/.emacs.d
