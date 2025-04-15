@@ -20,6 +20,11 @@ echo "The default is no. Valid options are: yes, no"
 read -p "screen> " SCRTYPE
 
 echo ""
+echo "Would you like to install common development tools?"
+echo "The default is yes. Valid options are: yes, no"
+read -p "editor> " DEVTOOLS
+
+echo ""
 echo "Would you like to install a more advanced editor?"
 echo "The default is yes. Valid options are: yes, no"
 read -p "editor> " ADVEDITOR
@@ -45,6 +50,13 @@ if [ "$SCRTYPE" == "yes" ]; then
     cp .config/foot/foot.ini.hidpi ~/.config/foot/foot.ini
 else
     cp .config/foot/foot.ini ~/.config/foot/foot.ini
+fi
+
+if [ "$DEVTOOLS" == "no" ]; then
+    echo ""
+    echo "Skipping development tools installation..."
+else
+    sudo dnf group install -y c-development development-tools cmake
 fi
 
 if [ "$ADVEDITOR" == "no" ]; then
