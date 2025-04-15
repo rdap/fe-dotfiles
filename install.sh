@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf .git .gitignore
+# rm -rf .git .gitignore
 
 echo ""
 echo "Welcome to the the Fedora-Sway dotfile installer."
@@ -10,8 +10,8 @@ echo ""
 echo "If this is your first boot into your new Fedora-Sway installation,"
 echo "you should update via dnf and reboot first before running this script."
 echo ""
-echo "Will you be using a Macintosh or IBM PC layout?"
-echo "The default is IBM. Valid options are: ibm, mac"
+echo "Will you be using a Macintosh or PC keyboard?"
+echo "The default is PC. Valid options are: mac, pc"
 read -p "keyboard> " KBDTYPE
 
 echo ""
@@ -36,17 +36,17 @@ rm -rf ~/.config/sway
 cp -r .config/* ~/.config/
 
 if [ "$KBDTYPE" == "mac" ]; then
-    cp ~/.config/sway/config.macintosh ~/.config/sway/config
+    cp .config/sway/config.mac ~/.config/sway/config
 elif [ "$KBDTYPE" == "ibm" ]; then
-    cp ~/.config/sway/config.ibm ~/.config/sway/config
+    cp .config/sway/config.pc ~/.config/sway/config
 else
-    cp ~/.config/sway/config.ibm ~/.config/sway/config
+    cp .config/sway/config.pc ~/.config/sway/config
 fi
 
 if [ "$SCRTYPE" == "yes" ]; then
-    cp ~/.config/foot/foot.ini.macintosh ~/.config/foot/foot.ini
+    cp .config/foot/foot.ini.hidpi ~/.config/foot/foot.ini
 else
-    cp ~/.config/foot/foot.ini.ibm ~/.config/foot/foot.ini
+    cp .config/foot/foot.ini ~/.config/foot/foot.ini
 fi
 
 if [ "$EMACS" == "no" ]; then
