@@ -37,8 +37,6 @@ cp -r .config/* ~/.config/
 
 if [ "$KBDTYPE" == "mac" ]; then
     cp .config/sway/config.mac ~/.config/sway/config
-elif [ "$KBDTYPE" == "ibm" ]; then
-    cp .config/sway/config.pc ~/.config/sway/config
 else
     cp .config/sway/config.pc ~/.config/sway/config
 fi
