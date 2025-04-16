@@ -90,8 +90,8 @@ fi
 if [ "$MEDIAFIX" == "yes" ]; then
     echo ""
     echo "Installing a complete ffmpeg to correct some known issues with Fedora's..."
-    sudo dnf swap ffmpeg-free ffmpeg --allowerasing
-    sudo dnf install libva-intel-driver
+    sudo dnf swap -y ffmpeg-free ffmpeg --allowerasing
+    sudo dnf install -y libva-intel-driver
 else
     echo ""
     echo "Leaving ffmpeg alone..."
