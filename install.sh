@@ -87,7 +87,7 @@ else
     cp -r .local/bin ~/.local/
 fi
 
-if [ "MEDIAFIX" == "yes" ]; then
+if [ "$MEDIAFIX" == "yes" ]; then
     echo ""
     echo "Installing a complete ffmpeg to correct some known issues with Fedora's..."
     sudo dnf swap ffmpeg-free ffmpeg --allowerasing
